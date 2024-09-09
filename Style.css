@@ -4,16 +4,18 @@
     box-sizing: border-box;
     color: #fff;
 }
-
-.logIn, .signUp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
     background: url(resources/login_background.png) no-repeat;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.logIn, .signUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+   
 }
 
 .registration_form {
@@ -116,31 +118,36 @@
     background: transparent;
     margin: 10px;
     padding: 10px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+   
 
 }
 
 .header .logo a{
  display:flex;
- justify-content: space-between;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
 
 }
 .header .logo a img{
     width:100px;
     height:100px;
     border-radius: 50%;
-
+    padding:5px;
+}
+.header .logo a img:hover{
+    border-radius: 40%;
 }
 .header .logo a h1{
     font-weight: 600;
-    text-decoration:none;
     color: #fff;
+    text-decoration: none;
+    
 }
 
 .header .logo a h1:hover{
     color:darkolivegreen;
-    text-decoration: none;
+    
 }
 
 .header .navbar {
@@ -167,15 +174,15 @@
 }
 
 .header .navbar .navbutton a:hover {
-    color: #fff;    
-    text-decoration: underline;
+    color: darkolivegreen;  
+    text-decoration: none;
 }
 .header .login a {
     display: flex;
     justify-content: space-between;
     padding:10px;
     /* position: relative; */
-
+    text-decoration: none;
 }
 .header .login a button{
     height: 45px;
@@ -195,7 +202,8 @@
     font-weight: 600;
 }
 .header .login a button:hover{
-    background: darkgray;
+    background: darkolivegreen;
+    text-decoration: none;
 }
 .header .login a i{
     padding:10px;
@@ -203,7 +211,10 @@
     height: 100%;
     font-size: 32px;
 }
-
+.header .login a i:hover{
+    color: darkolivegreen;
+    text-decoration: none;
+}
 .search-sort {
     display: flex;
     justify-content: center;
@@ -222,19 +233,25 @@
     padding:5px;
 }
 .search-sort .search input {
-color:black;
+    color:#fff;
     width: 500px;
     height: 60px;
     border-radius: 10px;
     text-align: center;
-    font-family:'Courier New', Courier, monospace ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-weight: 900;
+    background: transparent;
 }
+
+
 .filter-sort{
     display: flex;
     font-size: 32px;
     padding: 5px;
 }
-
+.search-sort .search i:hover,.filter-sort i:hover{
+    color: darkolivegreen;
+}
 .welcome-banner {
     display: flex;
     justify-content: space-between; /* Space between the image and content */
@@ -302,7 +319,7 @@ color:black;
 }
 
 .welcome-banner .welcome-content .btn button:hover {
-    background: darkgray;
+    background: darkolivegreen;
 }
 
 .welcome-banner .welcome-content .btn button a {
@@ -346,7 +363,7 @@ color:black;
 
 .recipes .recipes-cards .card:hover,
 .blogs .blogs-cards .card:hover {
-    background: #050202;
+    background: darkolivegreen;
     border-radius: 10px;
 }
 
@@ -383,13 +400,109 @@ color:black;
     padding: 20px;
 }
 .about-us button:hover{
-    background: darkgray;
+    background: darkolivegreen;
 }
 .testimonials{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    
+}
+.testimonials h1{
+    font-weight: 600;
+    text-align: center;
+}
+.testimonial-cards{
+    background: #333;
+    border-radius: 30px;
+}
+.testimonial-cards:hover{
+    background: darkolivegreen;
+}
+
+.testimonials .testimonial-cards .tst-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding:10px;  
+    /* background-color: darkgreen;                                                                                                      */
+}
+.testimonials .testimonial-cards .tst-card img{
+    padding:20px;
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.testimonials .testimonial-cards .tst-card p{
+    text-align: center;
+    font-weight: 600px;
+    font-size: 20px;
+    padding: 20px;
+}
+.testimonials .testimonial-cards .tst-card h3{
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding:20px;
 }
 footer{
     display: flex;
     flex-direction: row;
+    min-height: 40vh;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    padding: 40px;
+    background-color: darkolivegreen;
+    
+}
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 20px;
+}
+footer .contact a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+footer .contact  a:hover{
+    text-decoration: underline;
+}
+footer .copyright p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+ padding:10px;   
+}
+footer .socials a{
+    padding:10px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+footer .socials a:hover{
+    text-decoration: underline;
 }
